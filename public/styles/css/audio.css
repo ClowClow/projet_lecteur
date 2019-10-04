@@ -26,7 +26,7 @@ h1 {
     align-items: center;
     width: 50%;
     margin: 10em auto;
-    padding-bottom: 3em;
+    padding-bottom: 6em;
     background-color: #202225;
     border-radius: 1em; }
     .audioLecteur .audioLecteur_frame .audioToolbar {
@@ -42,8 +42,9 @@ h1 {
         width: 5em;
         background-color: transparent;
         color: mediumSpringGreen;
-        border: 0.1em solid mediumSpringGreen;
+        border: 0.2em solid mediumSpringGreen;
         border-radius: 0.5em;
+        font-weight: bold;
         border: none; }
       .audioLecteur .audioLecteur_frame .audioToolbar .audioVolume {
         vertical-align: bottom;

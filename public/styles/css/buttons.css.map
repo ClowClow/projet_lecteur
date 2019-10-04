@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAMA,WAAW;AAKX,UAAU",
+"mappings": "AAMA,WAAW;AAMX,UAAU",
 "sources": ["../sass/colors.scss"],
 "names": [],
 "file": "buttons.css"

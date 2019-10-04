@@ -37,8 +37,12 @@ h1 {
         width: 5em;
         background-color: transparent;
         color: mediumSpringGreen;
-        border: 0.1em solid mediumSpringGreen;
-        border-radius: 0.5em; }
+        border: 0.2em solid mediumSpringGreen;
+        border-radius: 0.5em;
+        font-weight: bold; }
+      .videoLecteur .videoLecteur_frame .videoToolbar .videoControl:hover {
+        color: aquamarine;
+        border: 0.2em solid aquamarine; }
       .videoLecteur .videoLecteur_frame .videoToolbar .videoVolume {
         vertical-align: bottom;
         display: inline-block;

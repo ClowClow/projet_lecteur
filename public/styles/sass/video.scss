@@ -27,6 +27,9 @@
       .videoControl {
         @include btn_flashGreen;
       }
+      .videoControl:hover {
+        @include btn_flashGreen_hover;
+      }
 
       .videoVolume {
         vertical-align: bottom;

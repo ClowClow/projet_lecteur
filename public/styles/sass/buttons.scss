@@ -4,6 +4,12 @@
   width: 5em;
   background-color: transparent;
   color: $fgreen;
-  border: 0.1em solid mediumSpringGreen;
+  border: 0.2em solid $fgreen;
   border-radius: 0.5em;
+  font-weight: bold;
+}
+
+@mixin btn_flashGreen_hover {
+  color: $lfgreen;
+  border: 0.2em solid $lfgreen;
 }
