@@ -1,3 +1,6 @@
+/* fond d'écran vidéo */
+$('#mainVid')[0].play();
+
 /* js pour inter-changer les icônes */
 
 var getBtn = document.getElementById('playBtn');

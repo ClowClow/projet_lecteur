@@ -2,6 +2,16 @@
 @import 'mep';
 @import 'buttons';
 
+video#bgVid {
+  position: fixed;
+  left: 0;
+  top: 7em;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+}
+
 .audioLecteur {
   display: flex;
   flex-direction: column;
@@ -16,7 +26,9 @@
     margin: 10em auto;
     padding-bottom: 6em;
     background-color: $dark;
+    border: 0.1em solid $fgreen;
     border-radius: 1em;
+    z-index: 10;
 
   .audioToolbar {
     display: flex;
