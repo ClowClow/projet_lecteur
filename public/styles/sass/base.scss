@@ -1,0 +1,48 @@
+@import 'colors';
+@import 'mep';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background-color: $dgrey;
+  color: #fff;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $dark;
+  height: 7em;
+
+  .nav_items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    .nav_items_elt {
+      font-size: 2em;
+      font-family: 'Permanent Marker', cursive;
+
+      & a {
+        color: deepSkyBlue;
+      }
+
+      & a:hover {
+        color: lightSkyBlue;
+      }
+    }
+  }
+}

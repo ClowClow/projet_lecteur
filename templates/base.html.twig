@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="stylesheet" type="text/css" href="{{asset('styles/css/base.css')}}">
+        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+      <main>
+        <section class="nav">
+          <ul class="nav_items">
+            <li class="nav_items_elt">
+              <a href="{{path('site')}}">Accueil</a>
+            </li>
+            <li class="nav_items_elt">
+              <a href="{{path('audio')}}">Lecteur audio</a>
+            </li>
+            <li class="nav_items_elt">
+              <a href="{{path('listeMusiques')}}">Liste des Musiques</a>
+            </li>
+            <li class="nav_items_elt">
+              <a href="{{path('video')}}">Lecteur vidéo</a>
+            </li>
+          </ul>
+        </section>
+        {% block body %}{% endblock %}
+        </main>
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

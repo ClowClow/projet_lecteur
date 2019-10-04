@@ -1,0 +1,31 @@
+/* verts */
+/* gris */
+a {
+  text-decoration: none;
+  color: #fff; }
+
+ul {
+  list-style: none; }
+
+h1 {
+  font-family: 'Permanent Marker', cursive;
+  color: mediumSpringGreen;
+  text-align: center;
+  padding-top: 3em; }
+
+.audioLecteur {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .audioLecteur .audioLecteur_frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin: 10em auto;
+    padding-bottom: 3em;
+    background-color: #202225;
+    border-radius: 1em; }
+
+/*# sourceMappingURL=audio.css.map */

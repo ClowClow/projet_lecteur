@@ -1,0 +1,50 @@
+/* verts */
+/* gris */
+a {
+  text-decoration: none;
+  color: #fff; }
+
+ul {
+  list-style: none; }
+
+h1 {
+  font-family: 'Permanent Marker', cursive;
+  color: mediumSpringGreen;
+  text-align: center;
+  padding-top: 3em; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background-color: #36393f;
+  color: #fff; }
+
+main {
+  flex-grow: 1; }
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #202225;
+  height: 7em; }
+  .nav .nav_items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; }
+    .nav .nav_items .nav_items_elt {
+      font-size: 2em;
+      font-family: 'Permanent Marker', cursive; }
+      .nav .nav_items .nav_items_elt a {
+        color: deepSkyBlue; }
+      .nav .nav_items .nav_items_elt a:hover {
+        color: lightSkyBlue; }
+
+/*# sourceMappingURL=base.css.map */
