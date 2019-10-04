@@ -16,8 +16,12 @@
     </audio>
 
     <div class="audioToolbar">
-      <button class="audioControl" onclick="play('audioPlayer', this)">Play</button>
-      <button class="audioControl" onclick="resume('audioPlayer', this)">Stop</button>
+      <button class="audioControl" id="playBtn" onclick="play('audioPlayer', this)">
+        <i class="far fa-play-circle fa-2x" id="transportIcone"></i>
+      </button>
+      <button class="audioControl" onclick="resume('audioPlayer', this)">
+        <i class="far fa-stop-circle fa-2x"></i>
+      </button>
 
       <span class="audioVolume">
         <a class="stick1" onclick="volume('audioPlayer', 0)"></a>

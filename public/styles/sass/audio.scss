@@ -30,6 +30,7 @@
 
     .audioControl {
       @include btn_flashGreen;
+      border: none;
     }
 
     .audioVolume {
