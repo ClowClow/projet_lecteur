@@ -15,8 +15,18 @@
       <source src="{{asset('music/daft-punk-harder-better-faster-stronger.mp3')}}">
     </audio>
 
-    <button class="audioControl" onclick="play('audioPlayer', this)">Play</button>
-    <button class="audioControl" onclick="resume('audioPlayer', this)">Stop</button>
+    <div class="audioToolbar">
+      <button class="audioControl" onclick="play('audioPlayer', this)">Play</button>
+      <button class="audioControl" onclick="resume('audioPlayer', this)">Stop</button>
+
+      <span class="audioVolume">
+        <a class="stick1" onclick="volume('audioPlayer', 0)"></a>
+        <a class="stick2" onclick="volume('audioPlayer', 0.3)"></a>
+        <a class="stick3" onclick="volume('audioPlayer', 0.5)"></a>
+        <a class="stick4" onclick="volume('audioPlayer', 0.7)"></a>
+        <a class="stick5" onclick="volume('audioPlayer', 1)"></a>
+      </span>
+    </div>
   </div>
 </section>
 {% endblock %}

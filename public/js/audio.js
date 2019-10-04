@@ -11,10 +11,18 @@ function play(idPlayer, audioControl) {
   }
 }
 
-/* fonction stop */ 
+/* fonction stop */
 function resume(idPlayer) {
   var player = document.querySelector('#' + idPlayer);
 
   player.currentTime = 0;
   player.pause();
+}
+
+/* fonction pour régler le volume */
+
+function volume(idPlayer, vol) {
+  var player = document.querySelector('#' + idPlayer);
+
+  player.audioVolume = vol;
 }

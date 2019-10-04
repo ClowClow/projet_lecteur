@@ -1,5 +1,6 @@
 @import 'colors';
 @import 'mep';
+@import 'buttons';
 
 .audioLecteur {
   display: flex;
@@ -16,5 +17,62 @@
     padding-bottom: 3em;
     background-color: $dark;
     border-radius: 1em;
+
+  .audioToolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 4em;
+    border: 0.2em solid $fgreen;
+    border-radius: 3em;
+
+    .audioControl {
+      @include btn_flashGreen;
+    }
+
+    .audioVolume {
+      vertical-align: bottom;
+      display: inline-block;
+      height: 25px;
+      white-space: nowrap;
+      position: relative;
+      width: 45px;
+    }
+    .audioVolume a {
+      display: inline-block;
+      background: $fgreen;
+      width: 8px;
+      vertical-align: bottom;
+      margin-left: 0px;
+      margin-right: 0px;
+      cursor: pointer;
+      border-left:1px solid "fff";
+      position: absolute;
+      bottom: 0;
+    }
+
+    .stick1 {
+      height: 5px;
+      left: 0px;
+    }
+    .stick2 {
+      height: 10px;
+      left: 9px;
+    }
+    .stick3 {
+      height: 15px;
+      left: 18px;
+    }
+    .stick4 {
+      height: 20px;
+      left: 27px;
+    }
+    .stick5 {
+      height: 25px;
+      left: 36px;
+    }
+  }
   }
 }

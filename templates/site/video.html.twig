@@ -16,9 +16,18 @@
       <source src="{{asset('video/oscar.mp4')}}">
       <source src="{{asset('video/oscar.webm')}}">
     </video>
+    <div class="videoToolbar">
+      <button class="videoControl" onclick="play('videoPlayer', this)">Play</button>
+      <button class="videoControl" onclick="resume('videoPlayer', this)">Stop</button>
 
-    <button class="videoControl" onclick="play('videoPlayer', this)">Play</button>
-    <button class="videoControl" onclick="resume('videoPlayer', this)">Stop</button>
+      <span class="videoVolume">
+        <a class="stick1" onclick="volume('videoPlayer', 0)"></a>
+        <a class="stick2" onclick="volume('videoPlayer', 0.3)"></a>
+        <a class="stick3" onclick="volume('videoPlayer', 0.5)"></a>
+        <a class="stick4" onclick="volume('videoPlayer', 0.7)"></a>
+        <a class="stick5" onclick="volume('videoPlayer', 1)"></a>
+      </span>
+    </div>
   </div>
 </section>
 {% endblock %}

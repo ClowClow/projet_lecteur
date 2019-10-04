@@ -13,6 +13,8 @@ h1 {
   text-align: center;
   padding-top: 3em; }
 
+/* verts */
+/* gris */
 .videoLecteur {
   display: flex;
   flex-direction: column;
@@ -29,5 +31,46 @@ h1 {
     border-radius: 1em; }
     .videoLecteur .videoLecteur_frame .videoPlayer {
       width: 75%; }
+    .videoLecteur .videoLecteur_frame .videoToolbar {
+      margin: 1em auto; }
+      .videoLecteur .videoLecteur_frame .videoToolbar .videoControl {
+        width: 5em;
+        background-color: transparent;
+        color: mediumSpringGreen;
+        border: 0.1em solid mediumSpringGreen;
+        border-radius: 0.5em; }
+      .videoLecteur .videoLecteur_frame .videoToolbar .videoVolume {
+        vertical-align: bottom;
+        display: inline-block;
+        height: 25px;
+        white-space: nowrap;
+        position: relative;
+        width: 45px; }
+      .videoLecteur .videoLecteur_frame .videoToolbar .videoVolume a {
+        display: inline-block;
+        background: mediumSpringGreen;
+        width: 8px;
+        vertical-align: bottom;
+        margin-left: 0px;
+        margin-right: 0px;
+        cursor: pointer;
+        border-left: 1px solid "fff";
+        position: absolute;
+        bottom: 0; }
+      .videoLecteur .videoLecteur_frame .videoToolbar .stick1 {
+        height: 5px;
+        left: 0px; }
+      .videoLecteur .videoLecteur_frame .videoToolbar .stick2 {
+        height: 10px;
+        left: 9px; }
+      .videoLecteur .videoLecteur_frame .videoToolbar .stick3 {
+        height: 15px;
+        left: 18px; }
+      .videoLecteur .videoLecteur_frame .videoToolbar .stick4 {
+        height: 20px;
+        left: 27px; }
+      .videoLecteur .videoLecteur_frame .videoToolbar .stick5 {
+        height: 25px;
+        left: 36px; }
 
 /*# sourceMappingURL=video.css.map */

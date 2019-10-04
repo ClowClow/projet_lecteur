@@ -1,0 +1,9 @@
+@import 'colors';
+
+@mixin btn_flashGreen {
+  width: 5em;
+  background-color: transparent;
+  color: $fgreen;
+  border: 0.1em solid mediumSpringGreen;
+  border-radius: 0.5em;
+}

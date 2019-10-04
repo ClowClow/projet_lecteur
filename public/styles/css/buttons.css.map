@@ -3,5 +3,5 @@
 "mappings": "AAMA,WAAW;AAKX,UAAU",
 "sources": ["../sass/colors.scss"],
 "names": [],
-"file": "colors.css"
+"file": "buttons.css"
 }
