@@ -12,10 +12,17 @@
   <div class="videoLecteur_frame">
     <h1>Music Your Life ~ Lecteur Vidéo</h1>
 
-    <video controls="controls" class="videoPlayer" id="videoPlayer">
+    <video class="videoPlayer" id="videoPlayer">
       <source src="{{asset('video/oscar.mp4')}}">
       <source src="{{asset('video/oscar.webm')}}">
     </video>
+
+    <button class="videoControl" onclick="play('videoPlayer', this)">Play</button>
+    <button class="videoControl" onclick="resume('videoPlayer', this)">Stop</button>
   </div>
 </section>
+{% endblock %}
+
+{% block javascripts %}
+<script type="text/javascript" src="{{asset('js/video.js')}}"></script>
 {% endblock %}

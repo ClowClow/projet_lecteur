@@ -11,9 +11,16 @@
   <div class="audioLecteur_frame">
     <h1>Music Your Life ~ Lecteur Audio</h1>
 
-    <audio controls="controls" id="audioPlayer">
+    <audio id="audioPlayer">
       <source src="{{asset('music/daft-punk-harder-better-faster-stronger.mp3')}}">
     </audio>
+
+    <button class="audioControl" onclick="play('audioPlayer', this)">Play</button>
+    <button class="audioControl" onclick="resume('audioPlayer', this)">Stop</button>
   </div>
 </section>
+{% endblock %}
+
+{% block javascripts %}
+<script type="text/javascript" src="{{asset('js/audio.js')}}"></script>
 {% endblock %}

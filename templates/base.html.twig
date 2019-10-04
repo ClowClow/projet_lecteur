@@ -27,6 +27,8 @@
         </section>
         {% block body %}{% endblock %}
         </main>
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+          <script type="text/javascript" src="{{asset('js/jquery.js')}}"></script>
+        {% endblock %}
     </body>
 </html>
