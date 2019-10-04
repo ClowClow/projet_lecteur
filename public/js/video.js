@@ -26,3 +26,17 @@ function volume(idPlayer, vol) {
 
   player.videoVolume = vol;
 }
+
+/* fonction barre de progression */
+
+function update(player) {
+  var duration = player.duration; //durée totale
+  var time = player.currentTime; //temps écoulé
+  var fraction = time/duration;
+  var percent = Math.ceil(fraction * 100);
+
+  var progress = document.querySelector('#progressBar');
+
+  progress.style.width = percent + '%';
+  /*progress.textContent = percent + '%'; avancée de la vidéo texte*/
+}
