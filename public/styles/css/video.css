@@ -1,0 +1,33 @@
+/* verts */
+/* gris */
+a {
+  text-decoration: none;
+  color: #fff; }
+
+ul {
+  list-style: none; }
+
+h1 {
+  font-family: 'Permanent Marker', cursive;
+  color: mediumSpringGreen;
+  text-align: center;
+  padding-top: 3em; }
+
+.videoLecteur {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .videoLecteur .videoLecteur_frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin: 8em auto;
+    padding-bottom: 5em;
+    background-color: #202225;
+    border-radius: 1em; }
+    .videoLecteur .videoLecteur_frame .videoPlayer {
+      width: 75%; }
+
+/*# sourceMappingURL=video.css.map */
