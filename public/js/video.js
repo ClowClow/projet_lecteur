@@ -27,6 +27,15 @@ function volume(idPlayer, vol) {
   player.videoVolume = vol;
 }
 
+/* fonction qui gère la mise en plein écran */
+
+function fullscreen() {
+  var elem = document.getElementById("videoPlayer");
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  }
+}
+
 /* fonction barre de progression */
 
 function update(player) {

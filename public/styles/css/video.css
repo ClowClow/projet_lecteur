@@ -52,6 +52,10 @@ h1 {
           white-space: nowrap;
           cursor: pointer; }
     .videoLecteur .videoLecteur_frame .videoToolbar {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
       width: 75%;
       padding: 1em; }
       .videoLecteur .videoLecteur_frame .videoToolbar .videoControl {
@@ -97,5 +101,7 @@ h1 {
       .videoLecteur .videoLecteur_frame .videoToolbar .stick5 {
         height: 25px;
         left: 36px; }
+      .videoLecteur .videoLecteur_frame .videoToolbar #fullscreen {
+        border: none; }
 
 /*# sourceMappingURL=video.css.map */

@@ -46,6 +46,10 @@
       }
     }
     .videoToolbar {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
       width: 75%;
       padding: 1em;
       .videoControl {
@@ -95,6 +99,9 @@
       .stick5 {
         height: 25px;
         left: 36px;
+      }
+      #fullscreen {
+        border: none;
       }
     }
   }
