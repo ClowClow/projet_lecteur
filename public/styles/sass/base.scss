@@ -66,3 +66,7 @@ main {
 .btnAdmin:hover {
   @include btn_flashBlue_hover;
 }
+
+.giftTux {
+  max-width: 30em;
+}

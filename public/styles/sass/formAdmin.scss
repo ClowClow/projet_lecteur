@@ -1,0 +1,27 @@
+@import 'colors';
+@import 'buttons';
+@import 'mep';
+
+.formAdmin {
+  margin: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .formAdminItem {
+    width: 30em;
+    padding: 0.5em;
+    text-align: left;
+    border-bottom: 0.1em solid $fblue;
+
+    .formAdminControl {
+      width: 30em;
+      color: $fgreen;
+      background-color: $dgrey;
+      font-size: 1em;
+      font-family: cursive;
+      padding: 1em;
+      border: none;
+    }
+  }
+}

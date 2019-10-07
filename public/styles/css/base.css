@@ -8,12 +8,15 @@ a {
 ul {
   list-style: none; }
 
-h1 {
+h2 {
   font-family: 'Permanent Marker', cursive;
   color: mediumSpringGreen;
   text-align: center;
   padding-top: 3em;
   margin-top: 2em; }
+
+label {
+  display: none; }
 
 /* bleus */
 /* verts */
@@ -80,5 +83,8 @@ main {
   border: 0.2em solid lightSkyBlue; }
   .btnAdmin:hover a {
     color: lightSkyBlue; }
+
+.giftTux {
+  max-width: 30em; }
 
 /*# sourceMappingURL=base.css.map */

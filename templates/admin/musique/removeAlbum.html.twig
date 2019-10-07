@@ -1,0 +1,19 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}Portail Administrateur{% endblock %}
+
+{% block body %}
+<h2>Supprimer l'album</h2>
+
+<form action="{{ path('removeAlbum')}}" method="POST" class="formAdmin">
+{% for list in list %}
+  <div class="formAdminItem">
+    <input type="checkbox" name="album[]" id="album" value="{{list.id}}" class="form-input">
+    <b>{{list.title}}</b>
+    </input>
+  </div>
+{% endfor %}
+<button type="submit" class="btnAdmin">Supprimer</button>
+</form>
+
+{% endblock %}

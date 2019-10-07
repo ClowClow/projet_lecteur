@@ -28,6 +28,11 @@ class Album
      */
     private $musiques;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $collection;
+
     public function __construct()
     {
         $this->musiques = new ArrayCollection();
@@ -72,6 +77,18 @@ class Album
         if ($this->musiques->contains($musique)) {
             $this->musiques->removeElement($musique);
         }
+
+        return $this;
+    }
+
+    public function getCollection(): ?string
+    {
+        return $this->collection;
+    }
+
+    public function setCollection(?string $collection): self
+    {
+        $this->collection = $collection;
 
         return $this;
     }
