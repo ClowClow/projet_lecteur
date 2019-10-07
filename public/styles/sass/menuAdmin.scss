@@ -1,0 +1,10 @@
+@import 'colors';
+@import 'buttons';
+@import 'mep';
+
+.espaceMusique {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

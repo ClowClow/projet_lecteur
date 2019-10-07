@@ -1,0 +1,37 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}Portail Administrateur{% endblock %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" type="text/css" href="{{asset('styles/css/menuAdmin.css')}}">
+{% endblock %}
+
+{% block body %}
+
+<section class="espaceMusique">
+  <h1>Espace Musique</h1>
+
+  <div class="menuMusique">
+    <button class="btnAdmin">
+      <a href="{{path('addMusique')}}">Ajouter une musique</a>
+    </button>
+    <button class="btnAdmin">
+      <a href="{{path('listMusique')}}">Modifier une musique</a>
+    </button>
+    <button class="btnAdmin">
+      <a href="{{path('removeMusique')}}">Supprimer une musique</a>
+    </button>
+    <br/>
+    <button class="btnAdmin">
+      <a href="{{path('addAlbum')}}">Ajouter un album</a>
+    </button>
+    <button class="btnAdmin">
+      <a href="{{path('listAlbum')}}">Modifier un album</a>
+    </button>
+    <button class="btnAdmin">
+      <a href="{{path('removeAlbum')}}">Supprimer un album</a>
+    </button>
+  </div>
+</section>
+
+{% endblock %}

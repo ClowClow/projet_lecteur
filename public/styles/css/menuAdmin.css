@@ -1,0 +1,27 @@
+/* bleus */
+/* verts */
+/* gris */
+/* bleus */
+/* verts */
+/* gris */
+a {
+  text-decoration: none;
+  color: #fff; }
+
+ul {
+  list-style: none; }
+
+h1 {
+  font-family: 'Permanent Marker', cursive;
+  color: mediumSpringGreen;
+  text-align: center;
+  padding-top: 3em;
+  margin-top: 2em; }
+
+.espaceMusique {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+/*# sourceMappingURL=menuAdmin.css.map */

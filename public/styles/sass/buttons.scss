@@ -13,3 +13,28 @@
   color: $lfgreen;
   border: 0.2em solid $lfgreen;
 }
+
+@mixin btn_flashBlue {
+  width: 8em;
+  min-height: 5em;
+  max-height: 5em;
+  margin: 1em;
+  background-color: transparent;
+  color: $fblue;
+  border: 0.2em solid $fblue;
+  border-radius: 0.5em;
+  font-weight: bold;
+
+  & a {
+    color: $fblue;
+  }
+}
+
+@mixin btn_flashBlue_hover {
+  color: $lfblue;
+  border: 0.2em solid $lfblue;
+
+  & a {
+    color: $lfblue;
+  }
+}

@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAMA,WAAW;AAMX,UAAU",
+"mappings": "AAKA,WAAW;AAIX,WAAW;AAMX,UAAU",
 "sources": ["../sass/colors.scss"],
 "names": [],
 "file": "colors.css"

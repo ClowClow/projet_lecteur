@@ -1,5 +1,6 @@
 @import 'colors';
 @import 'mep';
+@import 'buttons';
 
 * {
   box-sizing: border-box;
@@ -57,4 +58,11 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.btnAdmin {
+  @include btn_flashBlue;
+}
+.btnAdmin:hover {
+  @include btn_flashBlue_hover;
 }
