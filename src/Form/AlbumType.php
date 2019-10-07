@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Album;
 use App\Entity\Singer;
+use App\Entity\Groupe;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -31,6 +32,12 @@ class AlbumType extends AbstractType
               'class' => Singer::class,
               'choice_label' => 'lastname',
                 'placeholder' => 'Choisir l\'artiste',
+              'required'=> false,
+            ])
+            ->add('groupe', EntityType::class, [
+              'class' => Groupe::class,
+              'choice_label' => 'name',
+              'placeholder' => 'Choisir le groupe',
               'required'=> false,
             ])
         ;

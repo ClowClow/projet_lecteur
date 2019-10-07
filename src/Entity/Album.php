@@ -48,6 +48,11 @@ class Album
      */
     private $artist;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Groupe", inversedBy="albums")
+     */
+    private $groupe;
+
     public function __construct()
     {
         $this->musiques = new ArrayCollection();
@@ -140,6 +145,18 @@ class Album
     public function setArtist(?Singer $artist): self
     {
         $this->artist = $artist;
+
+        return $this;
+    }
+
+    public function getGroupe(): ?Groupe
+    {
+        return $this->groupe;
+    }
+
+    public function setGroupe(?Groupe $groupe): self
+    {
+        $this->groupe = $groupe;
 
         return $this;
     }

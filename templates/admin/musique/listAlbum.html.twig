@@ -14,8 +14,10 @@
   <div class="formAdminItem">
     <input type="radio" name="album[]" id="album" value="{{listAlbum.id}}" class="form-input">
     <b class="listText">{{listAlbum.title}},
-      {% if listAlbum.artist != null %}
-    {{listAlbum.artist.firstname}} {{listAlbum.artist.lastname}}
+    {% if listAlbum.artist != null %}
+      {{listAlbum.artist.firstname}} {{listAlbum.artist.lastname}}
+    {% else %}
+      {{listAlbum.groupe.name}}
     {% endif %}
   </b>
     </input>

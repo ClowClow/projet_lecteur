@@ -152,6 +152,12 @@ class AdminController extends AbstractController
                               'placeholder' => 'Choisir l\'artiste',
                             'required'=> false,
                           ])
+                          ->add('groupe', EntityType::class, [
+                            'class' => Groupe::class,
+                            'choice_label' => 'name',
+                            'placeholder' => 'Choisir le groupe',
+                            'required'=> false,
+                          ])
                           ->getForm();
         $formAlbum->handleRequest($request);
 
