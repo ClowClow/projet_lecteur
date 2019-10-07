@@ -109,20 +109,46 @@ class AdminController extends AbstractController
     /**
      * @Route("/admin/espaceMusique/listAlbum", name="listAlbum")
      */
-    public function listAlbum()
+    public function listAlbum(Request $request, ObjectManager $manager,AlbumRepository $repoAlbum)
     {
+        $listAlbum = $repoAlbum->findAll();
+
+        if(isset($_POST['album'])) {
+          foreach($_POST['album'] as $id) {
+            $number = $repoAlbum->find($id);
+            $manager->persist($number);
+          }
+          $manager->flush();
+          return $this->redirect('modifyAlbum/'.$id);
+
+        }
         return $this->render('admin/musique/listAlbum.html.twig', [
             'controller_name' => 'AdminController',
+            'listAlbum' => $listAlbum,
         ]);
     }
 
     /**
-     * @Route("/admin/espaceMusique/modifyAlbum", name="modifyAlbum")
+     * @Route("/admin/espaceMusique/modifyAlbum/{id}", name="modifyAlbum")
      */
-    public function modifyAlbum()
+    public function modifyAlbum(Album $album, Request $request, ObjectManager $manager)
     {
+        $formAlbum = $this->createFormBuilder($album)
+                          ->add('title')
+                          ->add('description')
+                          ->add('collection')
+                          ->add('notes')
+                          ->getForm();
+        $formAlbum->handleRequest($request);
+
+        if($formAlbum->isSubmitted() && $formAlbum->isValid()) {
+          $manager->persist($album);
+          $manager->flush();
+          return $this->redirectToRoute('congratulation');
+        }
         return $this->render('admin/musique/modifyAlbum.html.twig', [
             'controller_name' => 'AdminController',
+            'formAlbum' => $formAlbum->createView(),
         ]);
     }
 
@@ -131,7 +157,7 @@ class AdminController extends AbstractController
      */
     public function removeAlbum(Request $request, ObjectManager $manager,AlbumRepository $repoAlbum)
     {
-        $list = $repoAlbum->findAll();
+        $listAlbum = $repoAlbum->findAll();
 
         if (isset($_POST['album'])) {
           foreach ($_POST['album'] as $id) {
@@ -143,7 +169,7 @@ class AdminController extends AbstractController
         }
         return $this->render('admin/musique/removeAlbum.html.twig', [
             'controller_name' => 'AdminController',
-            'list'=> $list,
+            'listAlbum'=> $listAlbum,
         ]);
     }
 

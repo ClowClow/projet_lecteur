@@ -6,10 +6,10 @@
 <h2>Supprimer l'album</h2>
 
 <form action="{{ path('removeAlbum')}}" method="POST" class="formAdmin">
-{% for list in list %}
+{% for listAlbum in listAlbum %}
   <div class="formAdminItem">
-    <input type="checkbox" name="album[]" id="album" value="{{list.id}}" class="form-input">
-    <b>{{list.title}}</b>
+    <input type="checkbox" name="album[]" id="album" value="{{listAlbum.id}}" class="form-input">
+    <b>{{listAlbum.title}}</b>
     </input>
   </div>
 {% endfor %}

@@ -13,6 +13,7 @@ ul {
 
 h2 {
   font-family: 'Permanent Marker', cursive;
+  font-size: 2em;
   color: mediumSpringGreen;
   text-align: center;
   padding-top: 3em;
@@ -20,6 +21,13 @@ h2 {
 
 label {
   display: none; }
+
+.labelOn label {
+  display: block;
+  color: DeepSkyBlue;
+  font-family: cursive;
+  font-size: 1.5em;
+  font-weight: bold; }
 
 .espaceMusique {
   display: flex;

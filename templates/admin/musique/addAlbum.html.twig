@@ -17,7 +17,13 @@
     {{ form_row(formAlbum.title, {'label': 'Titre', 'attr': {'placeholder' : "Titre", 'class' : "formAdminControl"}})}}
   </div>
   <div class="formAdminItem">
+    {{ form_row(formAlbum.description, {'label': 'Description', 'attr': {'placeholder' : "Description", 'class' : "formAdminControl"}})}}
+  </div>
+  <div class="formAdminItem">
     {{ form_row(formAlbum.collection, {'label': 'Collection', 'attr': {'placeholder' : "Dans ma médiathèque ?", 'class' : "formAdminControl"}})}}
+  </div>
+  <div class="formAdminItem">
+    {{ form_row(formAlbum.notes, {'label': 'Notes', 'attr': {'placeholder' : "Notes à propos de l'album", 'class' : "formAdminControl"}})}}
   </div>
   <center>
     <button type="submit" class="btnAdmin">Ajouter</button>

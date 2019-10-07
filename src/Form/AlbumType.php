@@ -8,6 +8,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class AlbumType extends AbstractType
 {
@@ -15,7 +16,13 @@ class AlbumType extends AbstractType
     {
         $builder
             ->add('title', TextType::class)
+            ->add('description', TextareaType::class, [
+              'required' => false,
+            ])
             ->add('collection', TextType::class, [
+              'required' => false,
+            ])
+            ->add('notes', TextareaType::class, [
               'required' => false,
             ])
         ;

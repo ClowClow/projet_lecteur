@@ -1,0 +1,19 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}Portail Administrateur{% endblock %}
+
+{% block body %}
+<h2>Modifier l'album</h2>
+
+<form action="{{ path('listAlbum')}}" method="POST" class="formAdmin">
+{% for listAlbum in listAlbum %}
+  <div class="formAdminItem">
+    <input type="checkbox" name="album[]" id="album" value="{{listAlbum.id}}" class="form-input">
+    <b>{{listAlbum.title}}</b>
+    </input>
+  </div>
+{% endfor %}
+<button type="submit" class="btnAdmin">Modifier</button>
+</form>
+
+{% endblock %}
