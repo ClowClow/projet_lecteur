@@ -1,0 +1,29 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}Portail Administrateur{% endblock %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" type="text/css" href="{{asset('styles/css/formAdmin.css')}}">
+{% endblock %}
+
+{% block body %}
+
+<h2>Ajouter un groupe</h2>
+
+<section class="formAdmin">
+
+  {{ form_start(formGroup)}}
+  <div class="formAdminItem">
+    {{ form_row(formGroup.name, {'label': 'Nom', 'attr': {'placeholder' : "Nom du groupe", 'class' : "formAdminControl"}})}}
+  </div>
+  <div class="formAdminItem">
+    {{ form_row(formGroup.description, {'label': 'Description', 'attr': {'placeholder' : "Description", 'class' : "formAdminControl"}})}}
+  </div>
+  <center>
+    <button type="submit" class="btnAdmin">Ajouter</button>
+  </center>
+  {{ form_end(formGroup)}}
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}Portail Administrateur{% endblock %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" type="text/css" href="{{asset('styles/css/menuAdmin.css')}}">
+{% endblock %}
+
+{% block body %}
+
+<section class="espaceArtists">
+    <h2>Espace Artistes</h2>
+
+    <figure>
+      <img src="{{asset('img/babyTux.png')}}" alt="BabyTux" class="babyTux"/>
+    </figure>
+
+    <div class="menuArtists">
+      <button class="btnAdmin">
+        <a href="{{path('addSinger')}}">Ajouter un artiste</a>
+      </button>
+      <button class="btnAdmin">
+        <a href="">Modifier un artiste</a>
+      </button>
+      <button class="btnAdmin">
+        <a href="">Supprimer un artiste</a>
+      </button>
+      <br/>
+      <button class="btnAdmin">
+        <a href="{{path('addGroup')}}">Ajouter un groupe</a>
+      </button>
+      <button class="btnAdmin">
+        <a href="">Modifier un groupe</a>
+      </button>
+      <button class="btnAdmin">
+        <a href="">Supprimer un groupe</a>
+      </button>
+    </div>
+</section>
+{% endblock %}

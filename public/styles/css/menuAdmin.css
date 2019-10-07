@@ -29,7 +29,7 @@ label {
   font-size: 1.5em;
   font-weight: bold; }
 
-.espaceMusique {
+.espaceMusique, .espaceUser, .espaceVideo, .espaceArtists {
   display: flex;
   flex-direction: column;
   justify-content: center;

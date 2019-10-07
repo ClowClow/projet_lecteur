@@ -10,6 +10,14 @@ use Doctrine\Common\Persistence\ObjectManager;
 use App\Entity\Album;
 use App\Form\AlbumType;
 use App\Repository\AlbumRepository;
+use App\Entity\Singer;
+use App\Form\SingerType;
+use App\Repository\SingerRepository;
+use App\Entity\Groupe;
+use App\Form\GroupType;
+use App\Repository\GroupRepository;
+
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 
 class AdminController extends AbstractController
 {
@@ -138,6 +146,12 @@ class AdminController extends AbstractController
                           ->add('description')
                           ->add('collection')
                           ->add('notes')
+                          ->add('artist', EntityType::class, [
+                            'class' => Singer::class,
+                            'choice_label' => 'lastname',
+                              'placeholder' => 'Choisir l\'artiste',
+                            'required'=> false,
+                          ])
                           ->getForm();
         $formAlbum->handleRequest($request);
 
@@ -170,6 +184,60 @@ class AdminController extends AbstractController
         return $this->render('admin/musique/removeAlbum.html.twig', [
             'controller_name' => 'AdminController',
             'listAlbum'=> $listAlbum,
+        ]);
+    }
+
+    /**
+     * @Route("/admin/espaceArtists", name="espaceArtists")
+     */
+    public function espaceArtists()
+    {
+        return $this->render('admin/artists/espaceArtists.html.twig', [
+            'controller_name' => 'AdminController',
+        ]);
+    }
+
+    /**
+     * @Route("/admin/espaceArtists/addSinger", name="addSinger")
+     */
+    public function addSinger(Request $request, ObjectManager $manager)
+    {
+
+        $singer = new Singer();
+        $formSinger = $this->createForm(SingerType::class, $singer);
+        $formSinger->handleRequest($request);
+
+        if($formSinger->isSubmitted() && $formSinger->isValid()) {
+          $manager->persist($singer);
+          $manager->flush();
+          return $this->redirectToRoute('congratulation');
+        }
+
+        return $this->render('admin/artists/addSinger.html.twig', [
+            'controller_name' => 'AdminController',
+            'formSinger'=> $formSinger->createView(),
+        ]);
+    }
+
+    /**
+     * @Route("/admin/espaceArtists/addGroup", name="addGroup")
+     */
+    public function addGroup(Request $request, ObjectManager $manager)
+    {
+
+        $group = new Groupe();
+        $formGroup = $this->createForm(GroupType::class, $group);
+        $formGroup->handleRequest($request);
+
+        if($formGroup->isSubmitted() && $formGroup->isValid()) {
+          $manager->persist($group);
+          $manager->flush();
+          return $this->redirectToRoute('congratulation');
+        }
+
+        return $this->render('admin/artists/addGroup.html.twig', [
+            'controller_name' => 'AdminController',
+            'formGroup'=> $formGroup->createView()
         ]);
     }
 

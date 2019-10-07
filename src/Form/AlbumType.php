@@ -3,12 +3,14 @@
 namespace App\Form;
 
 use App\Entity\Album;
+use App\Entity\Singer;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 
 class AlbumType extends AbstractType
 {
@@ -24,6 +26,12 @@ class AlbumType extends AbstractType
             ])
             ->add('notes', TextareaType::class, [
               'required' => false,
+            ])
+            ->add('artist', EntityType::class, [
+              'class' => Singer::class,
+              'choice_label' => 'lastname',
+                'placeholder' => 'Choisir l\'artiste',
+              'required'=> false,
             ])
         ;
     }

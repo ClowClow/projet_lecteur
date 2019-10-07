@@ -1,0 +1,29 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}Portail Administrateur{% endblock %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" type="text/css" href="{{asset('styles/css/formAdmin.css')}}">
+{% endblock %}
+
+{% block body %}
+
+<h2>Ajouter un artiste</h2>
+
+<section class="formAdmin">
+
+  {{ form_start(formSinger)}}
+  <div class="formAdminItem">
+    {{ form_row(formSinger.firstname, {'label': 'Prénom', 'attr': {'placeholder' : "Prénom", 'class' : "formAdminControl"}})}}
+  </div>
+  <div class="formAdminItem">
+    {{ form_row(formSinger.lastname, {'label': 'Nom de famille', 'attr': {'placeholder' : "Nom de famille", 'class' : "formAdminControl"}})}}
+  </div>
+  <center>
+    <button type="submit" class="btnAdmin">Ajouter</button>
+  </center>
+  {{ form_end(formSinger)}}
+
+</section>
+
+{% endblock %}

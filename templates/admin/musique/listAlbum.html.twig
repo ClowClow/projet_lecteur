@@ -2,14 +2,22 @@
 
 {% block title %}Portail Administrateur{% endblock %}
 
+{% block stylesheets %}
+  <link rel="stylesheet" type="text/css" href="{{asset('styles/css/formAdmin.css')}}">
+{% endblock %}
+
 {% block body %}
 <h2>Modifier l'album</h2>
 
 <form action="{{ path('listAlbum')}}" method="POST" class="formAdmin">
 {% for listAlbum in listAlbum %}
   <div class="formAdminItem">
-    <input type="checkbox" name="album[]" id="album" value="{{listAlbum.id}}" class="form-input">
-    <b>{{listAlbum.title}}</b>
+    <input type="radio" name="album[]" id="album" value="{{listAlbum.id}}" class="form-input">
+    <b class="listText">{{listAlbum.title}},
+      {% if listAlbum.artist != null %}
+    {{listAlbum.artist.firstname}} {{listAlbum.artist.lastname}}
+    {% endif %}
+  </b>
     </input>
   </div>
 {% endfor %}

@@ -47,5 +47,7 @@ label {
       font-family: cursive;
       padding: 1em;
       border: none; }
+    .formAdmin .formAdminItem .listText {
+      color: mediumSpringGreen; }
 
 /*# sourceMappingURL=formAdmin.css.map */

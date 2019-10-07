@@ -3,7 +3,7 @@
 @import 'mep';
 
 
-.espaceMusique {
+.espaceMusique, .espaceUser, .espaceVideo, .espaceArtists {
   display: flex;
   flex-direction: column;
   justify-content: center;
